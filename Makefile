@@ -12,7 +12,8 @@ help:
 	@echo -e "$(WARN)- make plan			: Terraform plan command"
 	@echo -e "$(WARN)- make apply			: Terraform apply command"
 	@echo -e "$(WARN)- make help			: Show all commands"
-	@echo -e "$(WARN)- make push			: Push changes to the github$(NO_COLOR)"
+	@echo -e "$(WARN)- make push			: Push changes to the github"
+	@echo -e "$(WARN)- make vars			: Create vars.tf$(NO_COLOR)"
 
 init:
 	@printf "terraform init \n"
@@ -28,5 +29,8 @@ apply:
 
 push:
 	@bash push.sh
+
+vars:
+	@bash vars.sh
 
 .PHONY	: init plan apply push
